@@ -1,0 +1,489 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+body {
+    font-size: .875rem;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+#subs-active{
+	background-color: #4cb4c7;
+}
+
+
+#subs-end-date{
+	background-color: #7abecc;
+}
+
+#subs-amount{
+	background-color: #7CD1C0;
+}
+
+/*
+* Sidebar
+*/
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 40px; /* Height of navbar */
+    height: calc(100vh - 40px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+* Navbar
+*/
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+        /*
+ * Home Page Carousel
+ */
+    .carousel {
+    background: #ccc;
+  	position: relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    margin: 22px;
+}
+.carousel:after {
+	content: "";
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    height: 60px;
+    bottom: 0px;
+    left: 10px;
+    right: 10px;
+    border-radius: 100px / 20px;
+}
+.carousel .item {
+    text-align: center;
+	overflow: hidden;
+    height: 475px;
+}
+
+.carousel .item img {
+	max-width: 100%;
+    margin: 0 auto; /* Align slide image horizontally center in Bootstrap v3 */
+}
+.carousel .carousel-control {
+	width: 5px;
+    height: 5px;
+    background: #000;
+    margin: 0 auto;
+	opacity: 0.8;
+}
+.carousel .carousel-control:hover {
+	opacity: 0.9;
+}
+.carousel .carousel-control i {
+    font-size: 41px;
+}
+.carousel-caption h3, .carousel-caption p {
+	color: #fff;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	text-shadow: none;
+	margin-bottom: 20px;
+}
+.carousel-caption h3 {
+	background: rgba(0,0,0,0.9);
+	padding: 12px 24px;
+	font-size: 28px;
+	text-transform: uppercase;
+}
+.carousel-caption p {
+	background: #8fc93c;
+	padding: 10px 20px;
+	font-size: 13px;
+	font-weight: 300;
+}
+.carousel-action {
+	padding: 10px 0 30px;
+}
+.carousel-action .btn {
+	min-height: 14px;
+	border-radius: 0;
+	margin: 3px;
+	min-width: 50px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+ /* More Dynamic Buttons with CSS
+ */
+
+/* Dynamic Learn More btn */
+.carousel-action .btn-about{
+	display: inline-block;
+    border-radius: 10px;
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    width: 150px;
+    height: 34px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.carousel-action .btn-about span{
+    color: #ffffff;
+	cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.carousel-action .btn-about span:after{
+    color: #ffffff;
+	content: '\226b';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.carousel-action .btn-about:hover span {
+	padding-right: 19px;
+}
+.carousel-action .btn-about:hover span:after {
+	  opacity: 1;
+      right: 0;
+}
+/* Dynamic Subscribe btn */
+.carousel-action .btn-subscribe{
+	display: inline-block;
+    border-radius: 10px;
+    background-color: #8fc93c;
+    border: none;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    width: 150px;
+    height: 34px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.carousel-action .btn-subscribe span{
+	cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.carousel-action .btn-subscribe span:after{
+	content: '\226b';
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    font-size: 14px;
+}
+.carousel-action .btn-subscribe:hover span {
+	padding-right: 19px;
+}
+.carousel-action .btn-subscribe:hover span:after {
+	  opacity: 1;
+      right: 0;
+}
+/* Smooth Scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+       /*
+ * Home Page Divider Line
+ */
+
+hr.hr-text {
+    position: relative;
+    border: none;
+    height: 1px;
+    background: #807e7e;
+}
+
+hr.hr-text::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: #343a40;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #ffffff;
+    border-radius: 30rem;
+    padding: 0.2rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Our Product Section */
+
+.myImg{
+    max-width: 90%;
+    margin: 0 auto; /* Align slide image horizontally center in Bootstrap v3 */
+
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#ProductHeader{
+    font-size: 25px;
+    color: #181174;
+    padding-top: 7rem;
+    padding-left: 5rem;
+    font-weight: bold;
+}
+
+
+#ProductPara{
+    padding: 3rem;
+    font-weight: bold;
+}
+
+
+/* home page cards for Why Pick Us? section */
+
+
+#homeCardDeck .card-deck{
+    padding-top: 33px;
+    padding-left: 33px;
+    padding-right: 33px;
+
+}
+#homeCardDeck .card-deck .card{
+    background-color: #e2e2ea;
+    border-radius: 5%;
+}
+
+#homeCardDeck .card-img-top{
+    padding-bottom: 25px;
+}
+
+/* Reviews Section /Testimonials in New Styles */
+
+#ReviewsContainer body {
+    min-height: 100vh;
+    background-color: #eee;
+    background-size: cover;
+    font-family: 'Cormorant', serif;
+    color: rgb(112, 123, 240);
+}
+
+#ReviewsContainer{
+    margin-top: 40px
+}
+
+#ReviewsContainer p{
+    font-size: 17px;
+    margin-bottom: 7px
+}
+
+#ReviewsContainer .card-header img {
+    border: 5px solid white !important
+}
+
+#ReviewsContainer .outside {
+    position: inherit;
+    top: -50%
+}
+
+#ReviewsContainer .card {
+    border-radius: 20px !important;
+    box-shadow: 2px 2px 5px 0px rgb(100, 108, 170);
+    transition: 0.8s
+}
+
+#ReviewsContainer .card-header {
+    border-radius: 20px !important
+}
+
+#ReviewsContainer .card-footer {
+    border-radius: 20px !important
+}
+
+
+
+#ReviewsContainer .bold {
+    font-weight: 500
+}
+
+#ReviewsContainer .profile-pic {
+    margin-bottom: -5px !important
+}
+
+#ReviewsContainer .quotes {
+    position: relative;
+    top: -10px
+}
+
+#ReviewsContainer .quotes-down {
+    position: relative;
+    top: -4px
+}
+
+#ReviewsContainer .name {
+    margin-top: -50px !important
+}
+
+#ReviewsContainer .container-fluid:hover .card:not(:hover) {
+    transform: scale(0.9)
+}
+@media (max-width: 1000px) {
+    #ReviewsContainer .container-fluid:hover .card:not(:hover) {
+        transform: scale(1)
+    }
+}
+
+
+/*
+    /* Customer Review Old Styles Still used by Rosen for About Page otherwise - remove */
+
+.align-center {
+    text-align: center;
+}
+.hash-list {
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .hash-list.cols-3 > li:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+@media (min-width: 768px){
+    .hash-list.cols-3 > li {
+        width: 33.3333%;
+    }
+}
+.hash-list > li {
+    display: block;
+    float: left;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.pad-30, .pad-30-all > * {
+    padding: 30px;
+}
+img {
+    border: 0;
+}
+.mgb-20, .mgb-20-all > * {
+    margin-bottom: 20px;
+}
+.wpx-100, .wpx-100-after:after {
+    width: 100px;
+}
+.img-round, .img-rel-round {
+    border-radius: 50%;
+}
+.padb-30, .padb-30-all > * {
+    padding-bottom: 30px;
+}
+
+.mgb-40, .mgb-40-all > * {
+    margin-bottom: 40px;
+}
+.align-center {
+    text-align: center;
+}
+[class*="line-b"] {
+    position: relative;
+    padding-bottom: 20px;
+    border-color: #E6AF2A;
+}
+.fg-text-d, .fg-hov-text-d:hover, .fg-active-text-d.active {
+    color: #222;
+}
+.font-cond-b {
+    font-weight: 700 !important;
+}
+

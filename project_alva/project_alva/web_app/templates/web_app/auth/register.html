@@ -1,0 +1,17 @@
+{% extends "web_app/auth/base_auth.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form class="form-signin" method="POST">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <h1 class="h1 mb-3 font-weight-normal">Alva</h1>
+        <hr>
+        {{ form|crispy }}
+    </fieldset>
+    <button class="btn btn-lg btn-primary btn-block mb-3" type="submit">Register</button>
+    <label>
+        <a href="{% url 'login' %}">Have an account?</a>
+    </label>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
+</form>
+{% endblock content %}

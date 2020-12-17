@@ -1,0 +1,106 @@
+{% extends "web_app/base.html" %}
+{% block content %}
+<div class="container justify-content-center text-center">
+    <br>
+    <h2 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-3">SUBSCRIPTIONS</h2>
+    <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+        Become a member today and gain access to a state of the art prediction system.
+    </p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="card-deck justify-content-center text-center">
+
+            <div class="col-sm-5">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">
+                            Basic
+                        </h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h1 class="card-title pricing-card-title">
+                            $15 <small class="text-muted">/ mo</small>
+                        </h1>
+
+                        <ul class="list-unstyled mt-3 mb-2">
+                            <li>
+                                60 predictions
+                            </li>
+                            <li>
+                                per month
+                            </li>
+                        </ul>
+
+                        <select class="custom-select mb-2 custom-select-sm" id="selectBasic" name="selectBasic">
+                            <option disabled="true" selected>Select duration of subscription</option>
+                            <option value="1">One month</option>
+                            <option value="2">Three months</option>
+                            <option value="3">One year</option>
+                        </select>
+
+                        <button class="btn btn-lg btn-block btn-primary" name="basic" type="submit">
+                            Make subscription
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div class="card">
+
+                    <div class="card-header">
+
+                        <h4 class="my-0 font-weight-normal">
+                            Premium
+                        </h4>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <h1 class="card-title pricing-card-title">
+                            $29<small class="text-muted">/ mo</small>
+                        </h1>
+
+                        <ul class="list-unstyled mt-3 mb-2">
+                            <li>
+                                180 predictions
+                            </li>
+                            <li>
+                                per month
+                            </li>
+                        </ul>
+
+                        <select class="custom-select mb-2 custom-select-sm" id="selectPremium" name="selectPremium">
+                            <option disabled="true" selected>Select duration of subscription</option>
+                            <option value="4">One month</option>
+                            <option value="5">Three months</option>
+                            <option value="6">One year</option>
+                        </select>
+
+                        <button class="btn btn-lg btn-block btn-primary" name="premium" type="submit">
+                            Make subscription
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <!-- <div class="row w-25"> -->
+        {% if user.subscription is not None %}
+        <button class="btn btn-lg btn-inline btn-primary w-25" name="addPredictions" type="submit">
+            Buy extra 50 predictions
+        </button>
+        {% endif %}
+        <!-- </div> -->
+    </form>
+</div>
+{% endblock content %}

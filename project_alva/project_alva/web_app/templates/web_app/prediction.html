@@ -1,0 +1,17 @@
+{% extends "web_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="col-10">
+        <fieldset class="form-group col-10">
+            <h1 class="h1 mb-3 mt-3 font-weight-normal">Prediction</h1>
+            <hr>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-lg btn-primary mt-3 mb-3">Make prediction</button>
+        </div>
+    </div>
+</form>
+{% endblock content %}

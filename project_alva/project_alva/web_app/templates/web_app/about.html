@@ -1,0 +1,122 @@
+{% extends "web_app/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="col">
+  <form method="POST">
+    {% csrf_token %}
+    <br><br>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="mbr-white col-md-10">
+          <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">MEET OUR TEAM</h3>
+          <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
+            We are all very different. We were born in different cities, at different times, we love different music,
+            food, movies. But we have something that unites us all. It is our company. We are its heart.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr data-content="Dev team" class="hr-text">
+
+    <div class=" text-center">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              alt="Card image cap" width="200" src="/static/web_app/images/sophiamladenova.jpg">
+            <h4> <b>Sophia Mladenova</b> </h4>
+            <p class="mb-0">Team Manager</p>
+          </div>
+          <div class="col-lg-4 col-md-6 p-4 "> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              src="/static/web_app/images/angeljirov.jpg" alt="Card image cap" width="200">
+            <h4> <b>Angel Jirov</b> </h4>
+            <p class="mb-0">Machine Learning Engineer</p>
+          </div>
+          <div class="col-lg-4 p-4 "> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              src="/static/web_app/images/yordanatanasov.jpg" width="200">
+            <h4> <b>Yordan Atanasov</b> </h4>
+            <p class="mb-0">Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" text-center">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              alt="Card image cap" width="200" src="/static/web_app/images/ivanjirov.jpg">
+            <h4> <b>Ivan Jirov</b> </h4>
+            <p class="mb-0">Developer</p>
+          </div>
+          <div class="col-lg-4 col-md-6 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              src="/static/web_app/images/rosenpanayotov.jpg" alt="Card image cap" width="200">
+            <h4> <b>Rosen Panayotov</b> </h4>
+            <p class="mb-0">Developer</p>
+          </div>
+          <div class="col-lg-4 p-4"> <img class="img-fluid d-block mb-3 mx-auto rounded-circle"
+              src="/static/web_app/images/boristsvetanov.jpg" width="200">
+            <h4> <b>Boris Tsvetanov</b> </h4>
+            <p class="mb-0">Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="align-center">
+      <hr data-content="Contact us" class="hr-text">
+      <div class="container">
+        <div class="py-5 text-center">
+          <h2>Contact form</h2>
+          <p class="lead">Below is a contact form which you can use to submit your questions to the Alva development team.
+          </p>
+        </div>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">First name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Last name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+            <div class="invalid-feedback">
+              Please enter a valid email address.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="title">Title <span class="text-muted">(Optional)</span></label>
+            <input type="text" class="form-control" id="title" maxlength="30" name="title" placeholder="Title">
+          </div>
+
+          <div class="mb-3">
+            <label for="message">Message</label>
+            <textarea type="text" class="form-control" id="message" name="message"
+              placeholder="You can type your enquires here (You can extend this field from the bottow right arrow)"
+              required></textarea>
+            <div class="invalid-feedback">
+              Please enter your questions.
+            </div>
+
+          </div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Send</button>
+          <br></br>
+        </form>
+      </div>
+    </div>
+</div>
+</form>
+</div>
+{% endblock content %}

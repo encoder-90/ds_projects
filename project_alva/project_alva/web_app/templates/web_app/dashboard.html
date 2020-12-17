@@ -1,0 +1,81 @@
+{% extends "web_app/base.html" %}
+{% block content %}
+<div class="col-12 padding-5">
+    <h1 class="h1 mb-3 mt-3 font-weight-normal">Dashboard</h1>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white mb-3" id="subs-active">
+                    <div class="card-header">
+                        <h4 class="card-title">Subscription Active</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if is_subscribed %}
+                        <h3 class="card-title">Yes</h3>
+                        {% else %}
+                        <h3 class="card-title">No</h3>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white  mb-3" id="subs-end-date">
+                    <div class="card-header">
+                        <h4 class="card-title">Subscription End Date</h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ user.subscriptionEndDate }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md">
+                <div class="card text-center text-white  mb-3" id="subs-amount">
+                    <div class="card-header">
+                        <h4 class="card-title">Predictions Left</h4>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">{{ user.predictions_left }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="row">
+        <div class="col">
+            <div class="col-md-12">
+                <h5>LAST 5 RESULTS</h5>
+                <hr>
+                <div class="card card-body">
+
+                    <table class="table table-sm">
+                        <tr>
+                            <th>Type</th>
+                            <th>District</th>
+                            <th>Predicted Price</th>
+                            <th>Price per &#x33A1;</th>
+                        </tr>
+
+                        {% for result in results %}
+                        <tr>
+                            <td>{{result.apartmentType}}</td>
+                            <td>{{result.district}}</td>
+                            <td>{{result.pricePrediction}} Euro</td>
+                            <td>{{result.priceSQM }} Euro</td>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

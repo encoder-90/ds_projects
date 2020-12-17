@@ -1,0 +1,19 @@
+{% extends "web_app/base.html" %}
+{% load django_tables2 %}
+{% block content %}
+{% load bootstrap3 %}
+
+{% if filter %}
+    <form action="" method="get" class="form form-inline">
+        {% bootstrap_form filter.form layout='inline' %}
+        {% bootstrap_button 'FILTER' %}
+    </form>
+{% endif %}
+    {% render_table table %}
+    <hr>
+<div class="card-deck justify-content-center text-center">
+  {% for format in table.export_formats %}
+    <a href="{% export_url format %}" class="btn btn-info" role="button">Export to {{ format }}</a>
+  {% endfor %}
+</div>
+{% endblock content %}

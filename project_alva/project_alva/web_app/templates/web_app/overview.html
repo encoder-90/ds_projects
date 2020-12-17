@@ -1,0 +1,26 @@
+{% extends "web_app/base.html" %}
+{% load static %}
+{% block content %}
+<div class="col-12 padding-5">
+    <h1 class="h1 mb-3 mt-3 font-weight-normal">Overview</h1>
+    <object width="700px" height="500px" data="{% static file_name_bar_chart %}" type="image/svg+xml">
+        <img src="{% static file_name_bar_chart %}" />
+    </object>
+    <object width="700px" height="500px" data="{% static file_name_pie_chart %}" type="image/svg+xml">
+        <img src="{% static file_name_pie_chart %}" />
+    </object>
+    <hr>
+    <div class="card text-center mb-2">
+        <div class="card-body mb-1">
+            <h5 class="card-title">Predicted price - {{ prediction.pricePrediction }} Euro and {{ prediction.priceSQM }}
+                Euro/&#x33A1;</h5>
+            <p class="card-text">The property value is calculated utilizing a machine learning algorithm provided with
+                <b>{{ rows }}</b> number of listed properties for sale in the <b>Sofia</b> region.</p>
+            <p class="card-text">In the graph we have provided information about real estate properties for sale in the
+                <b>{{ district }}</b> district, with an average price calculated based on apartment type. </p>
+            <a href="{% url 'results' %}" class="btn btn-primary">Go to results</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
