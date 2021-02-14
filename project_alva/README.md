@@ -40,6 +40,16 @@ python manage.py runserver
 ```
 It defaults to localhost with port 8000 - http://localhost:8000
 
+### Running tests
+To run the website specific tests, run the following terminal command:
+```bash
+python manage.py test web_app.tests
+```
+This will run all of the model, view and form tests. To run a specific test:
+```bash
+python manage.py test web_app.tests.<test_file_name>.<test_class>.<test_method>
+```
+
 ## VS Code setting for those developing with it
 ### Linting
 Once the dependencies have been installed from the <i><b>requirements.txt</b></i>, you can set up flake 8 from user preferences which are opened by pressing <i>Ctrl+Shift+P</i>. In them, add:

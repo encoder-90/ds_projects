@@ -189,7 +189,7 @@ def login_view(request):
             return redirect("home")
         else:
             # No backend authenticated the credentials
-            messages.info(request, "Invalid credentials")
+            messages.error(request, "Invalid credentials")
             return redirect("login")
     else:
         return render(request, "web_app/auth/login.html")

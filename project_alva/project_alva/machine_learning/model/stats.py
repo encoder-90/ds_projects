@@ -102,7 +102,7 @@ def get_svg_bar_plot_district_mean_price_per_apartment_type(df_district, predict
     bar_chart.add('Penthouse', [mean_price_penthouse])
 
     file_name = f"prediction_bar{str(uuid.uuid4())}.svg"
-    file_location = f"web_app\\static\\web_app\\media\\{file_name}"
+    file_location = f"web_app/static/web_app/media/{file_name}"
     bar_chart.render_to_file(file_location)
 
     return file_name
@@ -153,7 +153,7 @@ def get_svg_pie_chart_by_number_properties_for_sale(df_district):
     pie_chart.add('Penthouse', [count_penthouse])
 
     file_name = f"prediction_pie{str(uuid.uuid4())}.svg"
-    file_location = f"web_app\\static\\web_app\\media\\{file_name}"
+    file_location = f"web_app/static/web_app/media/{file_name}"
 
     pie_chart.render_to_file(file_location)
     return file_name

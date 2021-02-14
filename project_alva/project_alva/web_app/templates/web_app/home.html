@@ -13,49 +13,52 @@
         <!-- Wrapper for carousel items -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="img-fluid" src="/static/web_app/images/test1.jpg" alt="Slide 1">
+                <img class="img-fluid" src="/static/web_app/images/slide1.jpeg" alt="Slide 1">
                 <div class="carousel-caption">
                     <h3>Innovative Technology</h3>
                     <div class="carousel-action">
-                        <a href="#Learn" class="btn btn-about"
-                           style="vertical-align:middle"><span>Learn More </span></a>
+                        <a href="#Learn" class="btn btn-about" style="vertical-align:middle"><span>Learn More
+                            </span></a>
                         {% if user.is_authenticated %}
                         <a href="{% url 'subscription' %}" class="btn btn-subscribe"
                            style="vertical-align:middle"><span>Subscribe </span></a>
                         {% else %}
-                        <a href="{% url 'register' %}" class="btn btn-subscribe" style="vertical-align:middle"><span>Register </span></a>
+                        <a href="{% url 'register' %}" class="btn btn-subscribe"
+                           style="vertical-align:middle"><span>Register </span></a>
                         {% endif %}
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="img-fluid" src="/static/web_app/images/test2.jpg" alt="Slide 2">
+                <img class="img-fluid" src="/static/web_app/images/slide2.jpeg" alt="Slide 2">
                 <div class="carousel-caption">
                     <h3>Precise Algorithm</h3>
                     <div class="carousel-action">
-                        <a href="#Learn" class="btn btn-about"
-                           style="vertical-align:middle"><span>Learn More </span></a>
+                        <a href="#Learn" class="btn btn-about" style="vertical-align:middle"><span>Learn More
+                            </span></a>
                         {% if user.is_authenticated %}
                         <a href="{% url 'subscription' %}" class="btn btn-subscribe"
                            style="vertical-align:middle"><span>Subscribe </span></a>
                         {% else %}
-                        <a href="{% url 'register' %}" class="btn btn-subscribe" style="vertical-align:middle"><span>Register </span></a>
+                        <a href="{% url 'register' %}" class="btn btn-subscribe"
+                           style="vertical-align:middle"><span>Register </span></a>
                         {% endif %}
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="img-fluid" src="/static/web_app/images/test3.jpg" alt="Slide 3">
+                <img class="img-fluid" src="/static/web_app/images/slide3.jpeg" alt="Slide 3">
                 <div class="carousel-caption">
                     <h3>Amazing Experience</h3>
                     <div class="carousel-action">
-                        <a href="#Learn" class="btn btn-about"
-                           style="vertical-align:middle"><span>Learn More </span></a>
+                        <a href="#Learn" class="btn btn-about" style="vertical-align:middle"><span>Learn More
+                            </span></a>
                         {% if user.is_authenticated %}
                         <a href="{% url 'subscription' %}" class="btn btn-subscribe"
                            style="vertical-align:middle"><span>Subscribe </span></a>
                         {% else %}
-                        <a href="{% url 'register' %}" class="btn btn-subscribe" style="vertical-align:middle"><span>Register </span></a>
+                        <a href="{% url 'register' %}" class="btn btn-subscribe"
+                           style="vertical-align:middle"><span>Register </span></a>
                         {% endif %}
                     </div>
                 </div>
@@ -74,22 +77,93 @@
         <hr data-content="Our Product" class="mt-5 mb-5 hr hr-text">
     </div>
     <section>
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-md-6 text-justify">
                     <h7 id="ProductHeader">Property Value Estimation System</h7>
 
-                    <p id="ProductPara" class="m0">Lorem ipsumm dolor sit amet, consectetur adipiscing elit. Fusce ac nisl eget ipsum
-                        condimentum porttitor quis vitae nunc.
-                        Phasellus in efficitur ex, sit amet sagittis sem. Vestibulum at mattis orci. Pellentesque
-                        posuere dictum semper.
-                        Nam vehicula, nisl nec pulvinar molestie, nunc lacus scelerisque urna, a ultrices tellus risus
-                        quis elit.
-                        Proin ut nunc elit. Pellentesque volutpat,
-                        nunc et pharetra elementum, nunc nisl posuere ipsum, in gravida sapien dolor eget eros.</p>
+                    <p id="ProductPara" class="m0">
+                        Lorem ipsum
+                    </p>
                 </div>
                 <div class="col-md-6">
                     <img src="/static/web_app/images/ourProduct.png" class="myImg" alt="product">
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <p> <h4><b>The Current Situation</b></h4>
+                    <hr>
+                    As the number of new buildings and living space square meters in Sofia is on the rise, we offer
+                    our clients a unique solution for property value estimation through Machine Learning. We believe
+                    that the
+                    current ways of performing property assessment are outdated and, in most cases, incorrect.
+                    Currently the official approach in the Sofia region based on buying or selling a property is the following:
+                    <br>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne">
+                                        If you are Selling a property
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    You ask an unlicensed broker to calculate the value of your property and
+                                    he/she acts on a hunch and 5 minutes market analysis. There is no official
+                                    methodology to
+                                    estimate the value based on predefined specification which means that for different
+                                    brokers your
+                                    property value can vary by more than 15%. If you work with one of the big agencies
+                                    they compare
+                                    your property with the last deals that they made in your district but this is still
+                                    highly inaccurate
+                                    as there are too many time-bonding factors that can influence the price.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                        If you are Buying a property
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    When you apply for a mortgage loan from a bank, they are obligated to make the
+                                    so-called “Official property value estimation from an independent appraiser”. The
+                                    estimation takes into consideration approximately three
+                                    properties for sale from the current market and the average square meters price for
+                                    the district along
+                                    with several other methods for statistical analysis. This of course is not nearly enough
+                                    depth of analysis to determine what's best for the client.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p> <h4><b>The Alva Solution</b></h4>
+                    <hr>
+                    On the contrary to the current way of working, our algorithm takes into account every property that is
+                    currently listed for sale as well as important information in regards to it, such as proximity to parks, metros, whether it's furnished or not and much more. 
+                    The Machine Learning algorithm calculates the property value using methods and approaches widely used by both 
+                    S&P 500 companies as well as research centers and universities all over the world. Our results can
+                    be traced back, evaluated, and explained. This happens for each individual property value estimation
+                    at the moment of your request to our system.
+                    </p>
                 </div>
             </div>
         </div>
@@ -114,57 +188,47 @@
         </div>
     </div>
     -->
-
     <!-- Horizontal List -->
     <div>
         <hr data-content="Why Pick Us?" class="mt-5 hr-text">
     </div>
-    <!-- Why Picks Us OLD
-    <div class="row mt-5">
-      <div class="col bg-light text-black">Superior In Accuracy  <img src="/static/web_app/homePageIcons/accuracy.png"></div>
-      <div class="col bg-light text-black">State Of The Art Technology  <img src="/static/web_app/homePageIcons/technology.png"></div>
-      <div class="col bg-light text-black">Industry Leading Hit Rate  <img src="/static/web_app/homePageIcons/growth.png"></div>
-      <div class="col bg-light text-black">High Level Granularity  <img src="/static/web_app/homePageIcons/granularity.png"></div>
-    </div> -->
-
     <div id="homeCardDeck">
-    <div class="card-deck">
-        <div class="card text-center" style="width: 40%;">
-            <div class="card-body">
-                <h5 class="card-title">Superior In Accuracy</h5>
+        <div class="card-deck">
+            <div class="card text-center" style="width: 40%;">
+                <div class="card-body">
+                    <h5 class="card-title">Superior In Accuracy</h5>
+                </div>
+                <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/accuracy.png" style="width:25%"
+                     alt="Card image cap">
             </div>
-            <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/accuracy.png" style="width:25%"
-                 alt="Card image cap">
-        </div>
-        <div class="card text-center" style="width: 40%;">
-            <div class="card-body">
-                <h5 class="card-title">State Of The Art Tech</h5>
+            <div class="card text-center" style="width: 40%;">
+                <div class="card-body">
+                    <h5 class="card-title">State Of The Art Tech</h5>
+                </div>
+                <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/technology.png" style="width:25%"
+                     alt="Card image cap">
             </div>
-            <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/technology.png" style="width:25%"
-                 alt="Card image cap">
-        </div>
-        <div class="card text-center" style="width: 40%;">
-            <div class="card-body">
-                <h5 class="card-title">Industry Leading Hit Rate</h5>
+            <div class="card text-center" style="width: 40%;">
+                <div class="card-body">
+                    <h5 class="card-title">Industry Leading Hit Rate</h5>
+                </div>
+                <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/growth.png" style="width:25%"
+                     alt="Card image cap">
             </div>
-            <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/growth.png" style="width:25%"
-                 alt="Card image cap">
-        </div>
-        <div class="card text-center" style="width: 40%;">
-            <div class="card-body">
-                <h5 class="card-title">High Level Granularity</h5>
+            <div class="card text-center" style="width: 40%;">
+                <div class="card-body">
+                    <h5 class="card-title">High Level Granularity</h5>
+                </div>
+                <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/granularity.png" style="width:25%"
+                     alt="Card image cap">
             </div>
-            <img class="card-img-top mx-auto" src="/static/web_app/homePageIcons/granularity.png" style="width:25%"
-                 alt="Card image cap">
         </div>
-    </div>
     </div>
 
 
     <!-- Customer Reviews New -->
     <div>
         <hr data-content="Read Reviews" class="mt-5 hr-text">
-        <!-- <h3 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Read Customer Reviews</h3> -->
     </div>
 
     <div class="container-fluid my-5 justify-content-center" id="ReviewsContainer">
@@ -174,11 +238,13 @@
                     <div class="card-header bg-white text-center border-0 ">
                         <div class="row justify-content-center ">
                             <div class="col"><img class="align-self-center text-center rounded-circle outside img-fluid"
-                                                  src="/static/web_app/homePageIcons/profilePic.png" width="110" height="110"></div>
+                                                  src="/static/web_app/homePageIcons/profilePic.png" width="110"
+                                                  height="110"></div>
                         </div>
                         <div class="row text-center name">
                             <div class="col">
-                                <h5 class="mb-0 profile-pic">Thomas Page</h5> <small class="mt-0">Real Estate Agent</small>
+                                <h5 class="mb-0 profile-pic">Thomas Page</h5> <small class="mt-0">Real Estate
+                                Agent</small>
                             </div>
                         </div>
                     </div>
@@ -186,21 +252,10 @@
                         <div class="row justify-content-center">
                             <div class="col-md-8 col">
                                 <p class="bold">
-                                    "I was very impressed when I first subscribed for Alva. The User Experience is astonishing
-									and the property prices accurate!"</p>
+                                    "I was very impressed when I first subscribed for Alva. The User Experience is
+                                    astonishing and the property prices accurate!"</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center bg-white border-0 mt-0 pt-0">
-                        <div class="row">
-                            <div class="col"><span class="mx-2"><i class="fa fa-twitter"
-                                                                   aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-facebook" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-instagram" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-pinterest-p" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-google-plus" aria-hidden="true"></i></span></div>
-                        </div>
-                        <hr class="my-1">
                     </div>
                 </div>
             </div>
@@ -209,11 +264,13 @@
                     <div class="card-header bg-white text-center border-0 ">
                         <div class="row justify-content-center ">
                             <div class="col"><img class="align-self-center text-center rounded-circle outside img-fluid"
-                                                  src="/static/web_app/homePageIcons/profilePic2.png" width="110" height="110"></div>
+                                                  src="/static/web_app/homePageIcons/profilePic2.png" width="110"
+                                                  height="110"></div>
                         </div>
                         <div class="row text-center name">
                             <div class="col">
-                                <h5 class="mb-0 profile-pic">Maria Ivanova</h5> <small class="mt-0">Marketing Director</small>
+                                <h5 class="mb-0 profile-pic">Maria Ivanova</h5> <small class="mt-0">Marketing
+                                Director</small>
                             </div>
                         </div>
                     </div>
@@ -222,20 +279,9 @@
                             <div class="col-md-8 col">
                                 <p class="bold">
                                     "I have never seen a more precise algorithm.
-									Alva helps me manage my money properly by providing accurate property values." </p>
+                                    Alva helps me manage my money properly by providing accurate property values." </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center bg-white border-0 mt-0 pt-0">
-                        <div class="row">
-                            <div class="col"><span class="mx-2"><i class="fa fa-twitter"
-                                                                   aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-facebook" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-instagram" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-pinterest-p" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-google-plus" aria-hidden="true"></i></span></div>
-                        </div>
-                        <hr class="my-1">
                     </div>
                 </div>
             </div>
@@ -244,11 +290,13 @@
                     <div class="card-header bg-white text-center border-0 ">
                         <div class="row justify-content-center ">
                             <div class="col"><img class="align-self-center text-center rounded-circle outside img-fluid"
-                                                  src="/static/web_app/homePageIcons/profilePic3.jpg" width="110" height="110"></div>
+                                                  src="/static/web_app/homePageIcons/profilePic3.jpg" width="110"
+                                                  height="110"></div>
                         </div>
                         <div class="row text-center name">
                             <div class="col">
-                                <h5 class="mb-0 profile-pic">Nikolay Georgiev</h5> <small class="mt-0">Real Estate Broker</small>
+                                <h5 class="mb-0 profile-pic">Nikolay Georgiev</h5> <small class="mt-0">Real Estate
+                                Broker</small>
                             </div>
                         </div>
                     </div>
@@ -257,56 +305,14 @@
                             <div class="col-md-8 col">
                                 <p class="bold">
                                     "For as little as 15 dollars you can gain insights on all of Sofia's real estate.
-									Alva is a must have for every buyer and every agent!" </p>
+                                    Alva is a must have for every buyer and every agent!" </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer text-center bg-white border-0 mt-0 pt-0">
-                        <div class="row">
-                            <div class="col"><span class="mx-2"><i class="fa fa-twitter"
-                                                                   aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-facebook" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-instagram" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-pinterest-p" aria-hidden="true"></i></span><span class="mx-2"><i
-                                    class="fa fa-google-plus" aria-hidden="true"></i></span></div>
-                        </div>
-                        <hr class="my-1">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- Customer Reviews Old -->
-    <!--
-    <div class="mt-5 mgb-40 padb-30 auto-invert line-b-4 align-center">
-        <hr data-content="Read Reviews" class="hr-text"> -->
-    <!-- <h3 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Read Customer Reviews</h3> -->
-    <!--  </div>
-      <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
-          <li>
-            <img src="/static/web_app/homePageIcons/profilePic.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-            <p class="fs-110 font-cond-l" contenteditable="false">"I was very impressed when I first subscribed for Alva. The User Experience is astonishing and the property prices are accurate!"</p>
-            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Thomas Page</h5>
-            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Real Estate Agent - Sofia</small>
-          </li>
-          <li>
-            <img src="/static/web_app/homePageIcons/profilePic2.png" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-            <p class="fs-110 font-cond-l" contenteditable="false">"I have never seen a more precise algorithm. Alva helps me manage my money properly by providing accurate property values."</p>
-            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Maria Ivanova</h5>
-            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Entrepreneur - Plovdiv</small>
-          </li>
-          <li>
-            <img src="/static/web_app/homePageIcons/profilePic3.jpg" class="wpx-100 img-round mgb-20" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
-            <p class="fs-110 font-cond-l" contenteditable="false">"For as little as 15 dollars you can gain insights on all of Sofia's real estate. Alva is a must have for every buyer and every agent!"</p>
-            <h5 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Nikolay Georgiev</h5>
-            <small class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Real Estate Broker - Sofia</small>
-          </li>
-        </ul>
-         -->
-
-
 </div>
 
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
